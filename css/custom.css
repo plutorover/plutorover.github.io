@@ -202,4 +202,47 @@
 
 h2 {
   margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+p {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.imagegallery img {
+  width: 100%;
+  display: block;
+}
+.imagegallery .row {
+  padding-bottom: 30px;
+  padding-left: 0;
+}
+
+.imagegallery {
+  width: 100%;
+}
+
+.file-downloads a {
+  padding: 2px 10px;
+}
+
+.file-downloads a span {
+  float: right;
+  padding: 7px 4px;
+}
+
+.file-downloads a .filetype {
+  float: right;
+}
+
+.file-downloads a:hover {
+  color: #337ab7;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+#top {
+  margin-top: 20px;
 }

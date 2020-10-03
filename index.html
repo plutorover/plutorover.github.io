@@ -31,6 +31,12 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+      integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+      crossorigin="anonymous"
+    />
 
     <link
       rel="stylesheet"
@@ -60,15 +66,17 @@
       <div class="container">
         <section id="top" class="section docs-heading">
           <div class="row">
-            <div class="col-md-12">
-              <div class="big-title text-center">
+            <div class="col-md-3">
+              <img
+                src="images/header.png"
+                alt=""
+                class="img-responsive headerimage"
+              />
+            </div>
+            <div class="col-md-9">
+              <div class="big-title">
                 <h1>Pluto Rover</h1>
                 <p class="lead">WBGS Young Engineers 2020</p>
-                <img
-                  src="images/header.png"
-                  alt=""
-                  class="img-responsive headerimage"
-                />
               </div>
               <!-- end title -->
             </div>
@@ -91,7 +99,7 @@
             >
               <ul class="nav">
                 <li><a href="#overview">Project Overview</a></li>
-                <li><a href="#demonstration">Demonstration</a></li>
+                <li><a href="#use">General use</a></li>
                 <li><a href="#pcb">PCB</a></li>
                 <li><a href="#files">CAD files and drawings</a></li>
                 <li><a href="#report">Full report</a></li>
@@ -136,25 +144,286 @@
                 <div class="col-md-12">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris massa nunc, aliquam id sollicitudin ut, mattis et
-                    erat. Integer suscipit, dolor molestie cursus porta, nibh
-                    turpis mattis felis, in facilisis nibh mi vel nunc. Nullam
-                    at ornare tortor. Sed enim tortor, porta at lacus vel,
-                    maximus consequat tortor. Praesent mattis urna et mi
-                    pharetra elementum. Mauris lacinia pretium nibh non dapibus.
-                    Nullam ac ante non lectus iaculis imperdiet. Nullam
-                    venenatis consequat purus sit amet suscipit. Nullam
-                    condimentum neque mi, eu dapibus nulla maximus eu.
+                    Nullam luctus ipsum sit amet tortor suscipit auctor.
+                    Vestibulum nisi augue, ultricies imperdiet molestie vel,
+                    facilisis malesuada turpis. Quisque et mollis felis, sit
+                    amet sollicitudin risus. Fusce vel turpis sit amet turpis
+                    gravida euismod. Donec placerat leo eget sem tempor
+                    porttitor. Nulla sagittis maximus tortor quis iaculis. Donec
+                    aliquam, enim vel vulputate mollis, odio ligula dignissim
+                    libero, a accumsan nisi tortor at diam. Nulla facilisi.
+                    Vestibulum dictum sit amet nulla et vestibulum. In imperdiet
+                    ullamcorper pharetra. Vivamus sodales sapien vitae porttitor
+                    imperdiet. Integer maximus velit orci, ac faucibus lectus
+                    accumsan ut. Mauris nisl justo, volutpat ac tortor
+                    imperdiet, aliquam tristique tortor.
                   </p>
-
-                  <h4>The specification</h4>
-
-                  <ul>
-                    <li>Specification point that was very interesting</li>
-                    <li>The rover must be able to fly.</li>
-                  </ul>
                 </div>
                 <!-- end col -->
+              </div>
+              <!-- end row -->
+            </section>
+            <!-- end section -->
+
+            <section id="use" class="section">
+              <div class="row">
+                <div class="col-md-12 left-align">
+                  <h2 class="dark-text">
+                    General use <a href="#top">return to top</a>
+                  </h2>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    The rover has been set up for easy demonstration.
+                  </p>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </section>
+            <!-- end section -->
+
+            <section id="pcb" class="section">
+              <div class="row">
+                <div class="col-md-12 left-align">
+                  <h2 class="dark-text">
+                    PCB <a href="#top">return to top</a>
+                  </h2>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    The PCB development was one of the most complex parts of the
+                    rover project.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <img src="images/pcbtop.png" class="img-responsive" />
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </section>
+            <!-- end section -->
+
+            <section id="files" class="section">
+              <div class="row">
+                <div class="col-md-12 left-align">
+                  <h2 class="dark-text">
+                    CAD files and drawings <a href="#top">return to top</a>
+                  </h2>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="list-group file-downloads">
+                    <a href="#" class="list-group-item">
+                      Mchanical assembly<span
+                        class="glyphicon glyphicon-file"
+                        aria-hidden="true"
+                      ></span>
+                      <div class="filetype">.f3d</div>
+                    </a>
+                    <a
+                      href="downloads/MECHANICAL_DRAWINGS.pdf"
+                      class="list-group-item"
+                      >Mechanical design drawings<span
+                        class="glyphicon glyphicon-file"
+                        aria-hidden="true"
+                      ></span>
+                      <div class="filetype">.pdf</div></a
+                    >
+                    <a href="#" class="list-group-item"
+                      >PCB schematics and boards<span
+                        class="glyphicon glyphicon-compressed"
+                        aria-hidden="true"
+                      ></span>
+                      <div class="filetype">.zip</div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end col -->
+                <div class="col-md-6">
+                  <p>
+                    Mechanical model files are provided in the F3D format. PCB
+                    files are in Eagle format. Some designs drawings are
+                    avilible as PDFs.
+                  </p>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </section>
+            <!-- end section -->
+
+            <section id="report" class="section">
+              <div class="row">
+                <div class="col-md-12 left-align">
+                  <h2 class="dark-text">
+                    Full report <a href="#top">return to top</a>
+                  </h2>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="list-group file-downloads">
+                    <a href="WBGS_2020_EES_FINAL.pdf" class="list-group-item">
+                      WBGS EES Report 2020<span
+                        class="glyphicon glyphicon-book"
+                        aria-hidden="true"
+                      ></span>
+                      <div class="filetype">.pdf</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <p>
+                    Download the full report above. The report was typesetted
+                    and rendered with
+                    <a href="https://www.latex-project.org/">LaTeX</a> and we
+                    used <a href="https://www.overleaf.com/">Overleaf</a> to
+                    collaborate consolidating the content. In addition to the
+                    main report, there are a number of appendicies that go into
+                    further detail about our research and design process.
+                  </p>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </section>
+            <!-- end section -->
+
+            <section id="gallery" class="section">
+              <div class="row">
+                <div class="col-md-12 left-align">
+                  <h2 class="dark-text">
+                    Gallery <a href="#top">return to top</a>
+                  </h2>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+              <div class="imagegallery">
+                <div class="row">
+                  <a
+                    href="images/rovergallery/IMG_20200328_202959.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202959.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202932.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202932.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202908.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202908.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                </div>
+                <div class="row">
+                  <a
+                    href="images/rovergallery/IMG_20200328_202901.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202901.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202800.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202800.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202328.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202328.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                </div>
+                <div class="row">
+                  <a
+                    href="images/rovergallery/IMG_20200328_202959.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202959.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202932.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202932.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                  <a
+                    href="images/rovergallery/IMG_20200328_202908.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                    class="col-md-4"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202908.jpg"
+                      class="img-fluid rounded"
+                    />
+                  </a>
+                </div>
               </div>
               <!-- end row -->
             </section>
@@ -174,6 +443,11 @@
     <script src="js/jquery.fitvids.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+      integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- CUSTOM PLUGINS -->
     <script src="js/custom.js"></script>
