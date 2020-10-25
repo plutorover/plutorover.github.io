@@ -99,7 +99,7 @@
             >
               <ul class="nav">
                 <li><a href="#overview">Project Overview</a></li>
-                <li><a href="#use">General use</a></li>
+                <li><a href="#use">Use</a></li>
                 <li><a href="#pcb">PCB</a></li>
                 <li><a href="#files">CAD files and drawings</a></li>
                 <li><a href="#report">Full report</a></li>
@@ -142,21 +142,32 @@
 
               <div class="row">
                 <div class="col-md-12">
+                  <div class="col-sm-6 pull-right">
+                    <video controls style="width:100% !important;">
+                      <source
+                        src="images/rovergallery/VID_20200403_152330.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam luctus ipsum sit amet tortor suscipit auctor.
-                    Vestibulum nisi augue, ultricies imperdiet molestie vel,
-                    facilisis malesuada turpis. Quisque et mollis felis, sit
-                    amet sollicitudin risus. Fusce vel turpis sit amet turpis
-                    gravida euismod. Donec placerat leo eget sem tempor
-                    porttitor. Nulla sagittis maximus tortor quis iaculis. Donec
-                    aliquam, enim vel vulputate mollis, odio ligula dignissim
-                    libero, a accumsan nisi tortor at diam. Nulla facilisi.
-                    Vestibulum dictum sit amet nulla et vestibulum. In imperdiet
-                    ullamcorper pharetra. Vivamus sodales sapien vitae porttitor
-                    imperdiet. Integer maximus velit orci, ac faucibus lectus
-                    accumsan ut. Mauris nisl justo, volutpat ac tortor
-                    imperdiet, aliquam tristique tortor.
+                    The WGBS 2020 Young Engineers team designed and constructed
+                    a Pluto Rover prototype, with the primary aim being able to
+                    traverse the terrain of Pluto and detect metals. The key
+                    requirements of the rover were to be manoeuvrable, be able
+                    to drive over rugged terrain, be able to drive autonomously
+                    (due to signals taking 4 hours 27 minutes to travel from the
+                    Earth to Pluto), and to be able to reliably detect metals.
+                    The team designed a rocker-bogie rover design to facilitate
+                    large suspension travel with limited moving parts and to
+                    allow for a 4-wheel steering system incorporating Ackermann
+                    steering angles for maximum manoeuvrability and longevity.
+                    Autonomous steering was achieved by taking the depth images
+                    from the Xbox Kinect V1 and processing them on the Raspberry
+                    Pi to generate a depth map to allow for routing decisions to
+                    then be made by the Pi. Metals are detected using a pulse
+                    induction metal detector mounted below the chassis, run off
+                    an Arduino Nano integrated on the custom PCB.
                   </p>
                 </div>
                 <!-- end col -->
@@ -169,7 +180,7 @@
               <div class="row">
                 <div class="col-md-12 left-align">
                   <h2 class="dark-text">
-                    General use <a href="#top">return to top</a>
+                    Use <a href="#top">return to top</a>
                   </h2>
                 </div>
                 <!-- end col -->
@@ -179,7 +190,65 @@
               <div class="row">
                 <div class="col-md-12">
                   <p>
-                    The rover has been set up for easy demonstration.
+                    The rover can be controlled using its remote control.
+                    Autonomous mode is trickier to get enabled and detailed
+                    instructions are not availible.
+                  </p>
+                  <h4>Manual demonstration</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <a
+                    href="images/rovergallery/IMG_20200328_202949.jpg"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                  >
+                    <img
+                      src="images/rovergallery/IMG_20200328_202949.jpg"
+                      class="img-responsive pull-right col-sm-6 col-md-4"
+                  /></a>
+                  <p>
+                    When the rover is powered on, the controller board checks to
+                    see if it can detect a signal from the remote control. If it
+                    can, the rover enters remote control mode until the power is
+                    cycled.
+                  </p>
+                  <p>
+                    The left stick on the controls both throttle (forward/back)
+                    and steering (left/right).
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h4>Charging</h4>
+                  <div class="intro2 clearfix">
+                    <p>
+                      <span
+                        class="glyphicon glyphicon-flash"
+                        aria-hidden="true"
+                      ></span>
+                      DO NOT OVERVOLT. 24V DC is the MAXIMUM power supply
+                      voltage that can be plugged into the barrel connector.
+                    </p>
+                  </div>
+                  <p>
+                    The rover is powered by 4 lithium-ion batteries mounted
+                    under the PCB. They are attached to a Battery Management
+                    System (BMS) circuit to allow for constant current charging.
+                    The system also ensures that the batteries should never be
+                    overcharged, but it is always reccomended to supervise the
+                    rover while charging.
+                  </p>
+                  <p>
+                    The barrel connector on the back of the rover is wired into
+                    a buck converter which reduced the voltage for the BMS.
+                    NEVER attempted to bypass the barrel connector.
+                  </p>
+                  <p>
+                    The rover can be switched on using the on/off switch located
+                    on the top of the rover.
                   </p>
                 </div>
                 <!-- end col -->
@@ -200,14 +269,35 @@
               <!-- end row -->
 
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
+                  <a
+                    href="images/pcbtop.png"
+                    data-toggle="lightbox"
+                    data-gallery="gallery"
+                  >
+                    <img
+                      src="images/pcbtop.png"
+                      class="img-responsive pull-right col-sm-7 col-md-6"
+                  /></a>
                   <p>
                     The PCB development was one of the most complex parts of the
-                    rover project.
+                    rover project. It serves several key functions:
+                    <br /><i>></i> Directly controlling and driving the motors
+                    in both directions at variable speeds with two H-Bridge
+                    circuits.<br />
+                    <i>></i> Driving each of the servos.<br />
+                    <i>></i> Detecting metals by measuring a relative value for
+                    the inductance of the underside coil.<br />
+                    <i>></i> Communicating with the Pi via I2C: sending metal
+                    detection results and reciving automatic controls.<br />
+                    <i>></i> Recieving controls from the manual reciever.<br />
+                    <i>></i> Providing power to the servos, motors, Pi and
+                    control circuitry.
                   </p>
-                </div>
-                <div class="col-md-6">
-                  <img src="images/pcbtop.png" class="img-responsive" />
+                  <p>
+                    For more information on the PCB design process please click
+                    <a href="">here</a>.
+                  </p>
                 </div>
                 <!-- end col -->
               </div>
@@ -229,14 +319,19 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="list-group file-downloads">
-                    <a href="#" class="list-group-item">
-                      Mchanical assembly<span
+                    <a
+                      download="downloads/MECHANICAL_ASSEMBLY.iges"
+                      href="downloads/MECHANICAL_ASSEMBLY.iges"
+                      class="list-group-item"
+                    >
+                      Mechanical assembly<span
                         class="glyphicon glyphicon-file"
                         aria-hidden="true"
                       ></span>
-                      <div class="filetype">.f3d</div>
+                      <div class="filetype">.iges</div>
                     </a>
                     <a
+                      download="downloads/MECHANICAL_DRAWINGS.pdf"
                       href="downloads/MECHANICAL_DRAWINGS.pdf"
                       class="list-group-item"
                       >Mechanical design drawings<span
@@ -246,20 +341,30 @@
                       <div class="filetype">.pdf</div></a
                     >
                     <a href="#" class="list-group-item"
-                      >PCB schematics and boards<span
+                      >PCB eagle files<span
                         class="glyphicon glyphicon-compressed"
                         aria-hidden="true"
                       ></span>
                       <div class="filetype">.zip</div>
+                    </a>
+                    <a
+                      download="downloads/PCB_ARDUINO_CODE.ino"
+                      href="downloads/PCB_ARDUINO_CODE.ino"
+                      class="list-group-item"
+                    >
+                      PCB Arduino code<span
+                        class="glyphicon glyphicon-file"
+                        aria-hidden="true"
+                      ></span>
+                      <div class="filetype">.ino</div>
                     </a>
                   </div>
                 </div>
                 <!-- end col -->
                 <div class="col-md-6">
                   <p>
-                    Mechanical model files are provided in the F3D format. PCB
-                    files are in Eagle format. Some designs drawings are
-                    avilible as PDFs.
+                    Mechanical model files are provided in the IGES format. PCB
+                    files are in Eagle format.
                   </p>
                 </div>
                 <!-- end col -->
@@ -327,103 +432,99 @@
                     href="images/rovergallery/IMG_20200328_202959.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202959.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202932.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202932.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202908.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202908.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
-                </div>
-                <div class="row">
                   <a
                     href="images/rovergallery/IMG_20200328_202901.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202901.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202800.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202800.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202328.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202328.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
-                </div>
-                <div class="row">
                   <a
                     href="images/rovergallery/IMG_20200328_202959.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202959.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202932.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202932.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                   <a
                     href="images/rovergallery/IMG_20200328_202908.jpg"
                     data-toggle="lightbox"
                     data-gallery="gallery"
-                    class="col-md-4"
+                    class="col-md-4 col-xs-6"
                   >
                     <img
                       src="images/rovergallery/IMG_20200328_202908.jpg"
-                      class="img-fluid rounded"
+                      class="img-fluid"
                     />
                   </a>
                 </div>

@@ -246,3 +246,7 @@ p {
 #top {
   margin-top: 20px;
 }
+
+.imagegallery a {
+  margin-bottom: 3rem;
+}
